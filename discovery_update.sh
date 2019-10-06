@@ -18,4 +18,4 @@ do
   scp /home/pi/startsecond.sh $ip:/home/pi
 done < "$iplist"
 
-bash <(curl -sL https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skyminer_update.sh)
+bash <(curl -sL https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skywire_update.sh)
