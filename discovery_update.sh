@@ -25,5 +25,3 @@ do
 done < "$iplist"
 
 ./skywire_update.sh
-
-sudo reboot
