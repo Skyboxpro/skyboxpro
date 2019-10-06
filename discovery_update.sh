@@ -1,16 +1,15 @@
 #!/bin/bash
 #Discovery Address Update
 
+curl -o startmanager.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/startmanager.sh
+curl -o startsecond.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/startsecond.sh
+curl -o skywire_update.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/skywire_update.sh
+
+
 cd
 chmod 777 startmanager.sh
 chmod 777 startsecond.sh
 chmod 777 skywire_update.sh
-cd /home/pi/go/src/github.com/skycoin/skywire
-git checkout master && git reset --hard && git clean -f -d
-git pull https://github.com/skycoin/skywire.git
-cd && go install ./...
-
-
 
 cd
 iplist="/home/pi/ips.txt"
@@ -21,6 +20,6 @@ do
 
 done < "$iplist"
 
+./skywire_update.sh
 
-echo "Rebooting now..."
 sudo reboot
