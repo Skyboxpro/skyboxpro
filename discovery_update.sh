@@ -20,8 +20,6 @@ iplist="/home/pi/ips.txt"
 while IFS= read -r ip
 do  
   scp /home/pi/startsecond.sh $ip:/home/pi
-  scp /home/pi/skywire_update.sh $ip:/home/pi
-
 done < "$iplist"
 
 ./skywire_update.sh
