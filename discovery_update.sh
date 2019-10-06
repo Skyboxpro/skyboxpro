@@ -1,9 +1,9 @@
 #!/bin/bash
 #Discovery Address Update
 
-curl -o startmanager.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/startmanager.sh
-curl -o startsecond.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/startsecond.sh
-curl -o skywire_update.sh https://raw.githubusercontent.com/Skyboxpro/offlinenotice/master/skywire_update.sh
+curl -LJO startmanager.sh https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/startmanager.sh
+curl -LJO startsecond.sh https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/startsecond.sh
+curl -LJO skywire_update.sh https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skywire_update.sh
 
 
 cd
