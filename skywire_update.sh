@@ -3,7 +3,7 @@
 # Update Skywire on local node
 
 echo ""
-echo "*****  Updating SKywire Software to latest version  *****"
+echo "*****  Updating Skywire Software to latest version  *****"
 echo "------------------------------------------------------"
 echo ""
 
