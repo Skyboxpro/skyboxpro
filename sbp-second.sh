@@ -13,26 +13,26 @@ sudo rm /home/pi/go/src/github.com/skycoin/skywire/static/script/skywire.default
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skywire.defaults &>/dev/null
 echo "Skywire Defaults file updated...100%"
 
-#Update Skywire manager-start service file - (download custom from Skybox git)
+#Update Skywire node-start service file - (download custom from Skybox git)
 cd /home/pi/go/src/github.com/skycoin/skywire/static/script/
 sudo rm /home/pi/go/src/github.com/skycoin/skywire/static/script/node_start &>/dev/null
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/node_start &>/dev/null
 sudo chmod 777 node_start
-echo "Manager autostart script updated (1/2)...100%"
+echo "Node autostart script updated (1/2)...100%"
 
 #Update Skywire start service file - (download custom from Skybox git)
 cd /home/pi/go/src/github.com/skycoin/skywire/static/script/
 sudo rm /home/pi/go/src/github.com/skycoin/skywire/static/script/start &>/dev/null
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/start &>/dev/null
 sudo chmod 777 start
-echo "Manager autostart script updated (2/2)...100%"
+echo "Node autostart script updated (2/2)...100%"
 
 #Update Skywire stop service file - (download custom from Skybox git)
 cd /home/pi/go/src/github.com/skycoin/skywire/static/script/
 sudo rm /home/pi/go/src/github.com/skycoin/skywire/static/script/stop &>/dev/null
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/stop &>/dev/null
 sudo chmod 777 stop
-echo "Manager stop script updated...100%"
+echo "Node stop script updated...100%"
 
 #Update Skywire update service file - (download custom from Skybox git)
 cd /home/pi/go/src/github.com/skycoin/skywire/static/script/
