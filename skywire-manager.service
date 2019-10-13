@@ -1,0 +1,13 @@
+[Unit]
+Description=Skywire Manager node start/stop service for Raspberry Pi Model 3B+
+After=network.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/go/src/github.com/skycoin/skywire/static/script/manager_start
+ExecStop=/home/pi/go/src/github.com/skycoin/skywire/static/script/stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
