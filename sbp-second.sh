@@ -11,6 +11,7 @@ while true;do echo -n .;sleep 0.1;done &
 cd /home/pi/go/src/github.com/skycoin/skywire/static/script/
 sudo rm /home/pi/go/src/github.com/skycoin/skywire/static/script/skywire.defaults &>/dev/null
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skywire.defaults &>/dev/null
+sudo chmod 777 skywire.defaults
 echo "Skywire Defaults file updated...100%"
 
 #Update Skywire node-start service file - (download custom from Skybox git)
