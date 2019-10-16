@@ -4,7 +4,7 @@
 
 # AUTOCAPTURE MANAGER IP ADDRESS 
 #Find IP address of manager's mac address
-MIP=$(sudo arp-scan --interface=eth0 --localnet | grep -F "$MANMAC" | awk '{print $1}')
+MIP=$(sudo arp-scan --interface=eth0 --localnet | grep -F "$MACADD" | awk '{print $1}')
 
 #Arp-scan does not pick up itself.
 if [ -z "$MIP" ]
