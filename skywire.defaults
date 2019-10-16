@@ -2,8 +2,20 @@
 # the environment to make it work properly
 #CUSTOMISED FOR USE ON RASPBERRY PI MODEL 3B+
 
-# CHANGE TO YOUR MANAGERS IP ADDRESS
-MANAGER_IP=192.168.87.152
+# AUTOCAPTURE MANAGER IP ADDRESS 
+#Find IP address of manager's mac address
+MIP=$(sudo arp-scan --interface=eth0 --localnet | grep -F "$MANMAC" | awk '{print $1}')
+
+#Arp-scan does not pick up itself.
+if [ -z "$MIP" ]
+then
+   #This is the manager node
+   MANAGER_IP=$(hostname -I | awk '{ print $1 }')
+
+else
+   #This is a secondary node
+   MANAGER_IP=$MIP
+fi
 
 # Go related variables
 HOME=/home/pi
