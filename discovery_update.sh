@@ -6,7 +6,7 @@ rm startsecond.sh
 
 
 echo ""
-echo “***** Updating Node IP Addresses  *****"
+echo ""***** Updating Node IP Addresses  *****"
 echo "------------------------------------------------------"
 echo ""
 
