@@ -4,6 +4,15 @@
 rm startmanager.sh
 rm startsecond.sh
 
+
+echo ""
+echo “***** Updating Node IP Addresses  *****"
+echo "------------------------------------------------------"
+echo ""
+
+bash <(curl -sL https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/findip.sh)
+
+
 echo ""
 echo "*****  Downloading new Discovery Address to the Manager Node  *****"
 echo "------------------------------------------------------"
