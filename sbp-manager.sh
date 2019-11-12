@@ -57,6 +57,12 @@ sudo rm /etc/systemd/system/skywire-manager.service &>/dev/null
 sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/skywire-manager.service &>/dev/null
 echo "Systemd unit file updated...100%"
 
+#Mac address file
+cd /home/pi/
+sudo wget https://raw.githubusercontent.com/Skyboxpro/skyboxpro/master/macaddress.env &>/dev/null
+sudo chmod 777 macaddress.env
+echo "Mac address file downloaded.....100%"
+
 #Disable existing systemd services
 sudo systemctl disable manager
 sudo systemctl disable secondary
