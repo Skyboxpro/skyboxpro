@@ -8,6 +8,7 @@ Type=oneshot
 ExecStart=/home/pi/go/src/github.com/skycoin/skywire/static/script/manager_start
 ExecStop=/home/pi/go/src/github.com/skycoin/skywire/static/script/stop
 RemainAfterExit=yes
+EnvironmentFile=/home/pi/macaddress.env
 
 [Install]
 WantedBy=multi-user.target
