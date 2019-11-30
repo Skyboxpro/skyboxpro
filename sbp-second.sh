@@ -67,6 +67,18 @@ sudo systemctl daemon-reload &>/dev/null
 sudo systemctl enable skywire-node.service &>/dev/null
 echo "Enable new autostart scripts...100%"
 
+echo ""
+echo "*****  Updating Skywire Software to latest version  *****"
+echo "------------------------------------------------------"
+echo ""
+
+
+cd /home/pi/go/src/github.com/skycoin/skywire
+git checkout master && git reset --hard && git clean -f -d
+git pull https://github.com/skycoin/skywire.git
+cd $GOPATH/src/github.com/skycoin/skywire/cmd
+go install ./...
+
 kill $!; trap 'kill $!' SIGTERM
 echo "Update Successful!!"
 #Reboot to start service
